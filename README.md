@@ -9,3 +9,8 @@ Flutter app with StreamBuilder consuming ColorStream for periodic background col
 
 ## Hasil Praktikum Soal 6
 NumberStream with StreamController, sink/addNumberToSink, listener UI with random button.
+
+## Hasil Praktikum Soal 9
+Full Stream app: listen/error/done, stopStream close, dispose cancel, safe add post-stop, buttons.
+
+![W12no9](W12no9.gif)
