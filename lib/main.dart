@@ -87,7 +87,7 @@ class _StreamHomePageState extends State<StreamHomePage> {
 
   @override
   void dispose() {
-    numberStreamController.close();
+    subscription.cancel();
     super.dispose();
   }
 
