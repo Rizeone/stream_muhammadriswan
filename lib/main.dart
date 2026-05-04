@@ -66,6 +66,10 @@ class _StreamHomePageState extends State<StreamHomePage> {
         lastNumber = -1;
       });
     });
+
+    subscription.onDone(() {
+      print('OnDone was called');
+    });
   
     super.initState();
   }
