@@ -58,6 +58,12 @@ class _StreamHomePageState extends State<StreamHomePage> {
     super.initState();
   }
 
+  void addRandomNumber() {
+    Random random = Random();
+    int myNum = random.nextInt(10);
+    numberStream.addNumberToSink(myNum);
+  }
+
   @override
   void dispose() {
     numberStreamController.close();
