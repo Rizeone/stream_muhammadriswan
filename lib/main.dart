@@ -78,6 +78,20 @@ class _StreamHomePageState extends State<StreamHomePage> {
       ),
       body: Container(
         decoration: BoxDecoration(color: bgColor),
+        child: SizedBox(
+          width: double.infinity,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Text(lastNumber.toString()),
+              ElevatedButton(
+                onPressed: () => addRandomNumber(),
+                child: const Text('New Random Number'),
+              )
+            ],
+          ),
+        ),
       ),
     );
   }
