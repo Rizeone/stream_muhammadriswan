@@ -59,6 +59,12 @@ class _StreamHomePageState extends State<StreamHomePage> {
   }
 
   @override
+  void dispose() {
+    numberStreamController.close();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
