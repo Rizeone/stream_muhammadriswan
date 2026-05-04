@@ -31,10 +31,19 @@ class _StreamHomePageState extends State<StreamHomePage> {
   Color bgColor = Colors.blueGrey;
   late ColorStream colorStream;
 
+  void changeColor() {
+    colorStream.getColors().listen((eventColor) {
+      setState(() {
+        bgColor = eventColor;
+      });
+    });
+  }
+
   @override
   void initState() {
     super.initState();
     colorStream = ColorStream();
+    changeColor();
   }
 
   @override
@@ -43,18 +52,8 @@ class _StreamHomePageState extends State<StreamHomePage> {
       appBar: AppBar(
         title: const Text('Stream'),
       ),
-      body: StreamBuilder<Color>(
-        stream: colorStream.getColors(),
-        builder: (context, snapshot) {
-          if (snapshot.hasData) {
-            return Container(
-              decoration: BoxDecoration(color: snapshot.data),
-            );
-          }
-          return Container(
-            decoration: const BoxDecoration(color: Colors.grey),
-          );
-        },
+      body: Container(
+        decoration: BoxDecoration(color: bgColor),
       ),
     );
   }
