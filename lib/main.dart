@@ -47,9 +47,15 @@ class _StreamHomePageState extends State<StreamHomePage> {
 
   @override
   void initState() {
+    numberStream = NumberStream();
+    numberStreamController = numberStream.controller;
+    Stream stream = numberStreamController.stream;
+    stream.listen((event) {
+      setState(() {
+        lastNumber = event;
+      });
+    });
     super.initState();
-    colorStream = ColorStream();
-    changeColor();
   }
 
   @override
