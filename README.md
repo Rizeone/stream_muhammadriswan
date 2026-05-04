@@ -10,7 +10,10 @@ Flutter app with StreamBuilder consuming ColorStream for periodic background col
 ## Hasil Praktikum Soal 6
 NumberStream with StreamController, sink/addNumberToSink, listener UI with random button.
 
-## Hasil Praktikum Soal 9
-Full Stream app: listen/error/done, stopStream close, dispose cancel, safe add post-stop, buttons.
+## Hasil Praktikum Soal 9-11
+Full Stream app: broadcast stream (.asBroadcastStream()), multiple listeners append to values string, UI Text(values) showing duplicated events, safe close + lifecycle.
 
 ![W12no9](W12no9.gif)
+![W12no10](W12no10.gif)
+
+**Soal 10-11:** Broadcast stream demo - multiple subscriptions share events w/o crash, UI accumulates "event - event - ..." (x2 listeners).
