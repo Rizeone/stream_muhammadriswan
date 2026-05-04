@@ -38,6 +38,7 @@ class _StreamHomePageState extends State<StreamHomePage> {
   late NumberStream numberStream;
 
   late StreamTransformer transformer;
+  late StreamSubscription subscription;
 
   void changeColor() {
     colorStream.getColors().listen((eventColor) {
