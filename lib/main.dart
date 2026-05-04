@@ -109,6 +109,10 @@ class _StreamHomePageState extends State<StreamHomePage> {
               ElevatedButton(
                 onPressed: () => addRandomNumber(),
                 child: const Text('New Random Number'),
+              ),
+              ElevatedButton(
+                onPressed: () => stopStream(),
+                child: const Text('Stop Subscription'),
               )
             ],
           ),
