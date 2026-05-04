@@ -81,6 +81,10 @@ class _StreamHomePageState extends State<StreamHomePage> {
     numberStream.addError();
   }
 
+  void stopStream() {
+    numberStreamController.close();
+  }
+
   @override
   void dispose() {
     numberStreamController.close();
