@@ -37,6 +37,8 @@ class _StreamHomePageState extends State<StreamHomePage> {
   late StreamController numberStreamController;
   late NumberStream numberStream;
 
+  late StreamSubscription subscription2;
+  String values = '';
   late StreamTransformer transformer;
   late StreamSubscription subscription;
 
@@ -52,23 +54,18 @@ class _StreamHomePageState extends State<StreamHomePage> {
   void initState() {
     numberStream = NumberStream();
     numberStreamController = numberStream.controller;
-    Stream stream = numberStreamController.stream;
+    Stream stream = numberStreamController.stream.asBroadcastStream();
   
-    // Menggunakan variabel subscription untuk menyimpan hasil listen
     subscription = stream.listen((event) {
       setState(() {
-        lastNumber = event;
-      });
-    });
-  
-    subscription.onError((error) {
-      setState(() {
-        lastNumber = -1;
+        values += '$event - ';
       });
     });
 
-    subscription.onDone(() {
-      print('OnDone was called');
+    subscription2 = stream.listen((event) {
+      setState(() {
+        values += '$event - ';
+      });
     });
   
     super.initState();
