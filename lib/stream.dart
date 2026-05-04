@@ -30,4 +30,8 @@ class NumberStream {
   void addNumberToSink(int newNumber) {
     controller.sink.add(newNumber);
   }
+
+  void close() {
+    controller.close();
+  }
 }
