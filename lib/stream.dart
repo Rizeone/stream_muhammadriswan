@@ -25,5 +25,5 @@ class ColorStream {
 }
 
 class NumberStream {
-
+  final StreamController<int> controller = StreamController<int>();
 }
