@@ -1,6 +1,9 @@
-# stream_muhammadriswan
+# Stream Muhammad Riswan - Week 12 Praktikum Soal 4
 
-A new Flutter project.
+![W12no4](W12no4.gif)
+
+## Hasil Praktikum Soal 4
+Flutter app with StreamBuilder consuming ColorStream for periodic background color changes.
 
 ## Getting Started
 

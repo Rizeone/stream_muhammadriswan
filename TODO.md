@@ -1,8 +1,1 @@
-# TODO: Add colors list to ColorStream
-
-## Steps:
-1. [x] Create TODO.md with plan steps
-2. [x] Edit lib/stream.dart to add the colors list inside ColorStream class
-3. [x] Update TODO.md with completion
-4. [x] Test the app with `flutter run`
-5. [x] Complete task
+# Soal 4 Completion TODO\n\n## Steps:\n1. [x] Cleanup lib/main.dart (remove TODO comment)\n2. [x] Update README.md (add GIF)\n3. [ ] Git add all\n4. [ ] Commit \"W12: Jawaban Soal 4\"\n5. [ ] Push to GitHub\n6. [ ] Complete
