@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'dart:async';
 
 class ColorStream {
   static final List<Color> colors = [
@@ -21,4 +22,8 @@ class ColorStream {
         return colors[index];
       });
   }
+}
+
+class NumberStream {
+
 }
