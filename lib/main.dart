@@ -107,7 +107,7 @@ class _StreamHomePageState extends State<StreamHomePage> {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Text(lastNumber.toString()),
+              Text(values),
               ElevatedButton(
                 onPressed: () => addRandomNumber(),
                 child: const Text('New Random Number'),
